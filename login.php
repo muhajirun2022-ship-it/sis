@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Admin</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
     <div class="login-container">
-        <h2>Login Admin Bengkel</h2>
+        <h2>Admin Login</h2>
+        <p class="subtitle">Silakan masuk ke dashboard</p>
 
         <form action="proses_login.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <div class="input-group">
+                <input type="text" name="username" required>
+                <label>Username</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit">Masuk</button>
         </form>
     </div>
 
