@@ -24,3 +24,48 @@ themeToggle.addEventListener("click", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
   themeToggle.textContent = isDark ? "☀️" : "🌙";
 });
+
+// Form validation
+const form = document.querySelector("form");
+const usernameInput = document.querySelector("input[name='username']");
+const passwordInput = document.getElementById("password");
+
+form.addEventListener("submit", (e) => {
+  let isValid = true;
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value;
+
+  // Clear previous error messages
+  clearErrors();
+
+  // Validate username
+  if (username === "") {
+    showError(usernameInput, "Username tidak boleh kosong");
+    isValid = false;
+  }
+
+  // Validate password
+  if (password === "") {
+    showError(passwordInput, "Password tidak boleh kosong");
+    isValid = false;
+  } else if (password.length < 6) {
+    showError(passwordInput, "Password minimal 6 karakter");
+    isValid = false;
+  }
+
+  if (!isValid) {
+    e.preventDefault(); // Prevent form submission
+  }
+});
+
+function showError(input, message) {
+  const errorElement = document.createElement("div");
+  errorElement.className = "error-message";
+  errorElement.textContent = message;
+  input.parentElement.appendChild(errorElement);
+}
+
+function clearErrors() {
+  const errors = document.querySelectorAll(".error-message");
+  errors.forEach((error) => error.remove());
+}

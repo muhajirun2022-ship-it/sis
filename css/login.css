@@ -152,6 +152,45 @@ button[type="submit"]:hover {
     box-shadow: 0 12px 25px rgba(239, 68, 68, 0.4);
 }
 
+/* Remember me */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.remember-me label {
+    color: var(--muted);
+    cursor: pointer;
+}
+
+/* Forgot password */
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Error messages */
+.error-message {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+}
+
 /* Mobile-first */
 @media (max-width: 480px) {
     .login-container {

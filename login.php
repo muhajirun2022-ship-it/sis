@@ -30,12 +30,19 @@
             </div>
 
             <div class="input-group password-group">
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" required minlength="6">
                 <label>Password</label>
                 <span class="toggle-password" id="togglePassword">👁</span>
             </div>
 
+            <div class="remember-me">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Ingat saya</label>
+            </div>
+
             <button type="submit">Masuk</button>
+
+            <a href="forgot_password.php" class="forgot-password">Lupa password?</a>
         </form>
     </div>
 
