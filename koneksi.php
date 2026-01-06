@@ -1,7 +1,11 @@
 <?php
-$koneksi = mysqli_connect("localhost", "root", "", "sistem bengkel");
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "sistem_bengkel";
 
-if (!$koneksi) {
-    die("Koneksi database gagal");
+$conn = mysqli_connect($host, $user, $pass, $db);
+
+if (!$conn) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
 }
-?>
