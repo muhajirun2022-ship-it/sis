@@ -18,7 +18,7 @@
 
     <div class="login-container">
         <!-- Logo -->
-        <img src="img/logo-bengkel.png" alt="Logo Bengkel" class="logo">
+        <img src="assets/logo_bengkel.png" alt="Logo Bengkel" class="logo">
 
         <h2>Admin Bengkel</h2>
         <p class="subtitle">Kelola sistem bengkel Anda</p>
