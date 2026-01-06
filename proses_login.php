@@ -5,7 +5,7 @@ include 'koneksi.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = mysqli_query($koneksi, 
+$query = mysqli_query($conn, 
     "SELECT * FROM admin WHERE username='$username' AND password='$password'"
 );
 
