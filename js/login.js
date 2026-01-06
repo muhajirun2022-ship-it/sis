@@ -28,7 +28,6 @@ themeToggle.addEventListener("click", () => {
 // Form validation
 const form = document.querySelector("form");
 const usernameInput = document.querySelector("input[name='username']");
-const passwordInput = document.getElementById("password");
 
 form.addEventListener("submit", (e) => {
   let isValid = true;
