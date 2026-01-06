@@ -5,16 +5,18 @@ include 'koneksi.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = mysqli_query($conn, "SELECT * FROM admin WHERE username='$username'");
-$data = mysqli_fetch_assoc($query);
+$query = mysqli_query($koneksi, 
+    "SELECT * FROM admin WHERE username='$username' AND password='$password'"
+);
 
-if ($data && password_verify($password, $data['password'])) {
+$data = mysqli_fetch_array($query);
+
+if ($data) {
     $_SESSION['login'] = true;
     $_SESSION['nama_admin'] = $data['nama_admin'];
-
-    header("Location: dashboard.php");
-    exit;
+    header("location:dashboard.php");
 } else {
-    header("Location: login.php?error=1");
-    exit;
+    echo "Login gagal";
 }
+?>
+
