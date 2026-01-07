@@ -23,7 +23,6 @@ if (!isset($_SESSION['login'])) {
     <main class="content">
         <header class="topbar">
             <div style="display: flex; align-items: center;">
-                <button id="hamburger" class="hamburger">☰</button>
                 <h2>Halo, <span style="color: var(--primary)"><?= $_SESSION['nama_admin'] ?? 'Admin'; ?></span> 👋</h2>
             </div>
             <button id="themeToggle" style="background:none; border:none; font-size:20px; cursor:pointer;">🌙</button>
